@@ -7,7 +7,7 @@ def compressImage():
     # Get the path of the image to be compressed
     path = entrada.get()
     # print(path)
-    pathOut = './imgOut'
+    pathOut = entrada.get()
 
     for file in os.listdir(path):
         if file.endswith(".jpeg"):
@@ -20,6 +20,16 @@ def compressImage():
             cleanName = os.path.splitext(file)[0]
             # Save the image
             img.save(pathOut + '/' + cleanName + '_compressed.jpg', optimize=True, quality=50)
+
+def deleteFile():
+    # Get the path of the image to be compressed
+    path = entrada.get()
+    # print(path)
+
+    for file in os.listdir(path):
+        if file.endswith(".jpeg"):
+            print(file)
+            # os.remove(path + '/' + file)
 
 # Create the App
 app = Tk()
@@ -41,6 +51,9 @@ entrada.place(x=100, y=130, width=400, height=20)
 
 botao = Button(app, text="COMPRIMIR", command=compressImage)
 botao.grid(row=1, column=1, padx=10, pady=50)
+
+botao2 = Button(app, text="DELETAR", command=deleteFile)
+botao2.place(x=400, y=178.5, width=80, height=25)
 
 
 app.mainloop()
