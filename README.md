@@ -5,6 +5,13 @@ Projeto com o objetivo de automatizar algumas tarefas necessárias para o dia a 
 ## <b>Primeiro projeto - ImageCompressor </b>
 
 O primeiro projeto criado foi um compressor de imagens. Feito com o objetivo de reduzir tamanho de arquivos no formato JPG, JPEG e PNG.
+<br>
+
+
+![Mapa](img/compress.png)
+
+
+
 
 Para rodar o programa basta colocar o seguinte comando no terminal:
 
